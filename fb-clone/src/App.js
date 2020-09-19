@@ -1,13 +1,22 @@
-import React from 'react';
+import React from "react";
+import Header from "./header";
+import "./App.css";
+import Sidebar from "./Sidebar";
 
-import './App.css';
-
-function app() {
+function App() {
   return (
-    <div className="App">
-    <h1>Lets build a clone</h1>
+    //BEM naming convention
+    <div className="app">
+      <Header />
+
+      <div className="app__body">
+        <Sidebar />
+        {/* feed */}
+        {/* Widgets */}
+      </div>
     </div>
   );
 }
 
-export default app;
+export default App;
+
