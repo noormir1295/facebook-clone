@@ -12,7 +12,11 @@ import { ExpandMoreOutlined } from "@material-ui/icons";
 function Sidebar() {
   return (
     <div className="sidebar">
-      <SidebarRow src="" title="Noor Mir" />
+      <SidebarRow
+        src="https://avatars2.githubusercontent.com/u/66847899?s=460
+        &u=d480012dd0ea3b716a77269ea7db462baf291261&v=4"
+        title="Noor Mir"
+      />
       <SidebarRow
         Icon={LocalHospitalIcon}
         title="COVID_19 Information Center"
