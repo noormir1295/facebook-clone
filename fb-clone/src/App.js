@@ -3,19 +3,31 @@ import Header from "./Header";
 import "./App.css";
 import Sidebar from "./Sidebar";
 import Feed from "./Feed.js";
-import Post from "./Post";
+import Widgets from "./Widgets.js";
+import Login from "./Login.js"
+
+
+
 
 function App() {
+  const user = null;
   return (
     //BEM naming convention
     <div className="app">
+      {!user ? (
+      <Login />
+      ) : (
+        <>
       <Header />
 
       <div className="app__body">
         <Sidebar />
         <Feed />
-       <Post />
+       <Widgets />
       </div>
+       </>
+      )};
+     
     </div>
   );
 }
