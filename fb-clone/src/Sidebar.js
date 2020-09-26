@@ -8,14 +8,15 @@ import StorefrontIcon from "@material-ui/icons/Storefront";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import { ExpandMoreOutlined } from "@material-ui/icons";
+import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
+  const [{ user }, dispatch] = useStateValue();
   return (
     <div className="sidebar">
       <SidebarRow
-        src="https://avatars2.githubusercontent.com/u/66847899?s=460
-        &u=d480012dd0ea3b716a77269ea7db462baf291261&v=4"
-        title="Noor Mir"
+        src={user.photoURL}
+        title={user.displayName}
       />
       <SidebarRow
         Icon={LocalHospitalIcon}
